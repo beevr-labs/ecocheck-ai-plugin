@@ -1,6 +1,6 @@
 {
   "name": "ecocheck",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "GHG inventory (ISO 14064-1, Vietnam Decree 06/2022) and EU CBAM for manufacturers and exporters: two expert skills plus the EcoCheck connector to record activity data, compute emissions and CBAM costs in your EcoCheck account.",
   "author": {
     "name": "EcoCheck by BeevR Technology",

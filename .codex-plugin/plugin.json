@@ -1,6 +1,6 @@
 {
   "name": "ecocheck",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "GHG inventory (ISO 14064-1, Vietnam Decree 06/2022) and EU CBAM for manufacturers and exporters: two expert skills plus the EcoCheck connector to record activity data, compute emissions and CBAM embedded emissions in your EcoCheck account.",
   "author": {
     "name": "BeevR Technology Co., Ltd.",
@@ -102,7 +102,7 @@
         "demo_recording_url": "https://cms.ecocheck.ai/uploads/ecocheck_chatgpt_demo_0b0fdd23ff.mp4"
       },
       "publication": {
-        "release_notes": "First release: EcoCheck connector (35 tools: GHG inventory, activity data, emissions reports, EU CBAM, reduction targets) plus EU CBAM and ISO 14064-1 skills."
+        "release_notes": "First release: EcoCheck connector (46 single-purpose tools: GHG inventory, activity data, emissions reports, EU CBAM, reduction targets, members) plus EU CBAM and ISO 14064-1 skills."
       }
     }
   }
