@@ -1,0 +1,59 @@
+{
+  "name": "ecocheck",
+  "version": "1.0.0",
+  "description": "GHG inventory (ISO 14064-1, Vietnam Decree 06/2022) and EU CBAM for manufacturers and exporters: two expert skills plus the EcoCheck connector to record activity data, compute emissions and CBAM embedded emissions in your EcoCheck account.",
+  "author": { "name": "BeevR Technology Co., Ltd.", "email": "connect@beevr.ai", "url": "https://ecocheck.ai" },
+  "homepage": "https://ecocheck.ai/ai/docs",
+  "repository": "https://github.com/beevr-labs/ecocheck-ai-plugin",
+  "license": "CC-BY-4.0",
+  "keywords": ["carbon", "ghg", "cbam", "iso-14064", "emissions", "esg", "vietnam"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.openai.json",
+  "interface": {
+    "displayName": "EcoCheck",
+    "shortDescription": "GHG inventory and EU CBAM",
+    "longDescription": "EcoCheck is a greenhouse-gas (GHG) inventory and EU CBAM platform used by manufacturers, exporters and their consultants in Vietnam. With EcoCheck in ChatGPT you can do your carbon work by just asking, in English or Vietnamese:\n\n- Record monthly activity data (electricity, fuels, refrigerants, purchased goods) for each facility; EcoCheck picks the right emission factor and unit and calculates tCO2e.\n- Get emissions by scope, ISO 14064-1 category, gas, source and month, find the largest sources, and track reduction targets.\n- Check whether a product's CN code is covered by the EU Carbon Border Adjustment Mechanism, look up EU default values, and compute actual specific embedded emissions (SEE) for steel, aluminium, cement and fertiliser installations.\n- Export Word inventory reports (ISO 14064-1 or Vietnam Decree 06/2022 templates).\n\nTwo expert skills (EU CBAM, ISO 14064-1) guide the assistant through the regulations and methods.\n\nEverything is saved in the same EcoCheck inventory your team uses on the web. Sign-in uses OAuth: ChatGPT never sees your password. The workspace owner sets each member's AI level (view only, view and edit, full access), can turn AI off, and reviews an audit log of every action. Deletions always require explicit confirmation.",
+    "developerName": "BeevR Technology Co., Ltd.",
+    "category": "Productivity",
+    "capabilities": [
+      "Record activity data and calculate emissions",
+      "Emissions reports by scope, ISO 14064-1 category and source",
+      "EU CBAM scope, default values and embedded emissions",
+      "Export ISO 14064-1 / Decree 06 Word reports",
+      "Reduction targets and actions"
+    ],
+    "websiteURL": "https://ecocheck.ai/ai/docs",
+    "supportURL": "https://ecocheck.ai/contact",
+    "privacyPolicyURL": "https://ecocheck.ai/ai/privacy",
+    "termsOfServiceURL": "https://ecocheck.ai/ai/terms",
+    "defaultPrompt": [
+      "Show our 2026 emissions by scope and the largest source.",
+      "Record this month's electricity use for our plant.",
+      "Is CN 7208 39 00 covered by CBAM, and what is the default value?"
+    ],
+    "brandColor": "#2A5C47",
+    "brandColorDark": "#9FE870",
+    "composerIcon": "./assets/logo.png",
+    "logo": "./assets/logo.png"
+  },
+  "extensions": {
+    "com.openai": {
+      "review": {
+        "test_cases": {
+          "positive": [
+            { "description": "List workspaces and the AI access level", "prompt": "List my EcoCheck workspaces and tell me my AI access level.", "tools_triggered": "list_workspaces, get_my_access", "expected_behavior": "Shows the workspace \"EcoCheck Demo (AI directory review)\" (role OWNER) and AI level WRITE (View and edit); the connection can write." },
+            { "description": "Emissions report by scope", "prompt": "What are Demo Steel's 2026 emissions by scope, and which source is the largest?", "tools_triggered": "get_inventories, get_emissions_report", "expected_behavior": "Reports about 1,174 t CO2e for 2026 split into Scope 1 and Scope 2 and names grid electricity (S2.001 EVN Electricity) as the largest source." },
+            { "description": "Record activity data", "prompt": "Record October 2026 electricity of 150,000 kWh for the Demo Steel rolling mill.", "tools_triggered": "get_inventories, get_emission_accounts, record_activity", "expected_behavior": "Books one journal on S2.001 for 2026-10-01 to 2026-10-31 with 150,000 kWh and reports the calculated t CO2e." },
+            { "description": "CBAM embedded emissions", "prompt": "Show the CBAM specific embedded emissions of our hot-rolled coil CN 7208 39 00 and compare them with the EU default value.", "tools_triggered": "get_inventories, get_cbam", "expected_behavior": "Returns the SEE (t CO2e per t) for CN 7208 39 00 at the Demo Steel rolling mill, the EU default value with mark-up for Vietnam, and the difference." },
+            { "description": "Export a Word report", "prompt": "Export the 2026 ISO 14064-1 inventory report for Demo Steel as a Word file.", "tools_triggered": "get_inventories, export_report", "expected_behavior": "Returns a download link to a .docx inventory report for Demo Steel, year 2026." }
+          ],
+          "negative": [
+            { "description": "Deletion is refused at the View and edit level", "prompt": "Delete the Demo Steel organization." },
+            { "description": "Invalid unit is refused and nothing is saved", "prompt": "Record 10 bananas of electricity for the rolling mill in October 2026." },
+            { "description": "Unrelated request should not call EcoCheck", "prompt": "What's the weather in Hanoi tomorrow?" }
+          ]
+        }
+      }
+    }
+  }
+}
