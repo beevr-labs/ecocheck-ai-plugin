@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "ecocheck": {
+      "type": "http",
+      "url": "https://ecocheck.ai/mcp/account"
+    },
+    "ecocheck-public": {
+      "type": "http",
+      "url": "https://ecocheck.ai/mcp"
+    }
+  }
+}

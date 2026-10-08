@@ -1,0 +1,8 @@
+{
+ "good": {"cn_code": "72083900", "activity_level_t": 12000, "category_direct_only": true},
+ "source_streams": [{"name": "LPG reheating furnace", "method": "combustion", "quantity": 1150, "ncv_tj_per_unit": 0.0473, "ef_t_per_tj": 63.1, "oxidation": 1}],
+ "electricity_mwh": 9800,
+ "grid_ef": 0.581,
+ "precursors": [{"cn_code": "72071114", "tonnes": 12400, "country": "VN", "verified": false}],
+ "year": 2026
+}

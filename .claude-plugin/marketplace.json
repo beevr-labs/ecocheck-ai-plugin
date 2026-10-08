@@ -1,0 +1,12 @@
+{
+  "name": "ecocheck",
+  "description": "EcoCheck plugins: GHG inventory and EU CBAM skills and connector",
+  "owner": { "name": "EcoCheck by BeevR Technology", "email": "connect@beevr.ai" },
+  "plugins": [
+    {
+      "name": "ecocheck",
+      "source": "./",
+      "description": "ISO 14064-1 and EU CBAM skills plus the EcoCheck connector (ecocheck.ai)"
+    }
+  ]
+}

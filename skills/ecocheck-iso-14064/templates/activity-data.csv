@@ -1,0 +1,7 @@
+site,period,iso_category,ghg_scope,source,activity_value,activity_unit,factor_co2,factor_ch4,factor_n2o,factor_other_co2e,factor_unit,factor_source,biogenic,ad_uncertainty_pct,ef_uncertainty_pct,note
+Nha may A,2026-01,1,1,Diesel generator,0.0441,TJ,74100,3,0.6,,kg/TJ,IPCC 2006 Vol.2 Tab.2.2 (diesel),no,2,5,1250 L x 0.82 kg/L x 43 TJ/Gg
+Nha may A,2026-01,1,1,LPG reheating furnace,0.15136,TJ,63100,1,0.1,,kg/TJ,IPCC 2006 Vol.2 Tab.2.3 (LPG),no,2,3,3.2 t x 47.3 TJ/Gg
+Nha may A,2026-01,1,1,Refrigerant R-410A top-up,12,kg,,,,1923.5,kg CO2e/kg,AR5 blend GWP (0.5 x 677 + 0.5 x 3170),no,10,0,service report
+Nha may A,2026-01,2,2,EVN grid electricity,182400,kWh,,,,0.6766,kg CO2e/kWh,EcoCheck library value - replace with the official national grid factor notice of the reporting year,no,1,5,EVN bill
+Nha may A,2026-01,4,3,Purchased steel billets (cat. 1),1000,t,,,,2350,kg CO2e/t,EU CBAM default VN 7207 11 14 (proxy without mark-up),no,1,30,supplier data pending
+Nha may A,2026-01,3,3,Outbound trucking (cat. 9),48000,t.km,,,,0.105,kg CO2e/t.km,average-data factor (state source),no,5,30,
