@@ -1,7 +1,7 @@
 {
   "name": "ecocheck",
   "version": "1.0.4",
-  "description": "GHG inventory (ISO 14064-1, Vietnam Decree 06/2022), product carbon footprints (ISO 14067 LCA) and EU CBAM for manufacturers and exporters: two expert skills plus the EcoCheck connector to record activity data, compute emissions, product footprints and CBAM costs in your EcoCheck account.",
+  "description": "GHG inventory (ISO 14064-1, Vietnam Decree 06/2022), product carbon footprints (ISO 14067 LCA) and EU CBAM for manufacturers and exporters: three expert skills plus the EcoCheck connector to record activity data, compute emissions, product footprints and CBAM costs in your EcoCheck account.",
   "author": {
     "name": "EcoCheck by BeevR Technology",
     "email": "connect@beevr.ai",

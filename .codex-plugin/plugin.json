@@ -1,7 +1,7 @@
 {
   "name": "ecocheck",
   "version": "1.0.4",
-  "description": "GHG inventory (ISO 14064-1, Vietnam Decree 06/2022), product carbon footprints (ISO 14067 LCA) and EU CBAM for manufacturers and exporters: two expert skills plus the EcoCheck connector to record activity data, compute emissions, product footprints and CBAM embedded emissions in your EcoCheck account.",
+  "description": "GHG inventory (ISO 14064-1, Vietnam Decree 06/2022), product carbon footprints (ISO 14067 LCA) and EU CBAM for manufacturers and exporters: three expert skills plus the EcoCheck connector to record activity data, compute emissions, product footprints and CBAM embedded emissions in your EcoCheck account.",
   "author": {
     "name": "BeevR Technology Co., Ltd.",
     "email": "connect@beevr.ai",
@@ -27,7 +27,7 @@
   "interface": {
     "displayName": "EcoCheck",
     "shortDescription": "GHG inventory, PCF and CBAM",
-    "longDescription": "EcoCheck is a greenhouse-gas (GHG) inventory and EU CBAM platform used by manufacturers, exporters and their consultants in Vietnam. With EcoCheck in ChatGPT you can do your carbon work by just asking, in English or Vietnamese:\n\n- Record monthly activity data (electricity, fuels, refrigerants, purchased goods) for each facility; EcoCheck picks the right emission factor and unit and calculates tCO2e.\n- Get emissions by scope, ISO 14064-1 category, gas, source and month, find the largest sources, and track reduction targets.\n- Check whether a product's CN code is covered by the EU Carbon Border Adjustment Mechanism, look up EU default values, and compute actual specific embedded emissions (SEE) for steel, aluminium, cement and fertiliser installations.\n- Calculate product carbon footprints (ISO 14067, cradle-to-gate or cradle-to-grave) from ready templates or your own processes and inputs, see the main contributors and uncertainty, and export the ISO 14067 report, a draft EPD or a PACT footprint for customers.\n- Export Word inventory reports (ISO 14064-1 or Vietnam Decree 06/2022 templates).\n\nTwo expert skills (EU CBAM, ISO 14064-1) guide the assistant through the regulations and methods.\n\nEverything is saved in the same EcoCheck inventory your team uses on the web. Sign-in uses OAuth: ChatGPT never sees your password. The workspace owner sets each member's AI level (view only, view and edit, full access), can turn AI off, and reviews an audit log of every action. Deletions always require explicit confirmation.",
+    "longDescription": "EcoCheck is a greenhouse-gas (GHG) inventory and EU CBAM platform used by manufacturers, exporters and their consultants in Vietnam. With EcoCheck in ChatGPT you can do your carbon work by just asking, in English or Vietnamese:\n\n- Record monthly activity data (electricity, fuels, refrigerants, purchased goods) for each facility; EcoCheck picks the right emission factor and unit and calculates tCO2e.\n- Get emissions by scope, ISO 14064-1 category, gas, source and month, find the largest sources, and track reduction targets.\n- Check whether a product's CN code is covered by the EU Carbon Border Adjustment Mechanism, look up EU default values, and compute actual specific embedded emissions (SEE) for steel, aluminium, cement and fertiliser installations.\n- Calculate product carbon footprints (ISO 14067, cradle-to-gate or cradle-to-grave) from ready templates or your own processes and inputs, see the main contributors and uncertainty, and export the ISO 14067 report, a draft EPD or a PACT footprint for customers.\n- Export Word inventory reports (ISO 14064-1 or Vietnam Decree 06/2022 templates).\n\nThree expert skills (EU CBAM, ISO 14064-1 inventory, ISO 14067 product carbon footprint) guide the assistant through the regulations and methods.\n\nEverything is saved in the same EcoCheck inventory your team uses on the web. Sign-in uses OAuth: ChatGPT never sees your password. The workspace owner sets each member's AI level (view only, view and edit, full access), can turn AI off, and reviews an audit log of every action. Deletions always require explicit confirmation.",
     "developerName": "BeevR Technology Co., Ltd.",
     "category": "Productivity",
     "capabilities": [
@@ -106,7 +106,7 @@
         "demo_recording_url": "https://cms.ecocheck.ai/uploads/ecocheck_chatgpt_demo_0b0fdd23ff.mp4"
       },
       "publication": {
-        "release_notes": "1.0.4: product carbon footprint (LCA / PCF, ISO 14067) tools: list and calculate product footprints, edit the product model, export the ISO 14067 report, draft EPD, ILCD and PACT footprint. The existing tools are unchanged."
+        "release_notes": "1.0.4: product carbon footprints (LCA / PCF, ISO 14067): a new expert skill and connector tools to build product models from templates or your own processes, set quantities, scenarios and co-products, calculate with uncertainty and sensitivity, and export the ISO 14067 report, draft EPD, ILCD, PACT footprint and the model (Excel, JSON-LD, SimaPro, EcoSpold2). The existing tools are unchanged."
       }
     }
   }
