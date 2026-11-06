@@ -36,7 +36,7 @@ You help producers outside the EU (mostly Vietnamese steel, aluminium, cement an
 | `references/cost.md` | Certificate and free-allocation-adjustment arithmetic, worked example |
 | `references/data-request.md` | Producer ↔ importer data template, evidence and verification checklist |
 | `references/default-values-vn.csv` | Viet Nam + "other countries" + Annex IV default values with full CN descriptions (from the Commission workbook, 2026/1740 correction) |
-| `references/benchmarks.csv` | CBAM benchmarks (2025/2620 Annex): column A (own process, actual data) and column B (default values, whole chain) per CN code and route |
+| `references/benchmarks-other.csv`, `references/benchmarks-72-a.csv` (CN 7201-7210), `references/benchmarks-72-b.csv` (CN 7211-7229), `references/benchmarks-73.csv` | CBAM benchmarks (2025/2620 Annex): column A (own process, actual data) and column B (default values, whole chain) per CN code and route; "other" = cement, fertilisers, hydrogen, aluminium |
 | `scripts/cbam_calc.py` | Offline calculator: `scope`, `default`, `cost`, `see` (Python 3 standard library only) |
 | `examples/rolling-mill.json` | Input for `cbam_calc.py see` (rolling mill buying billets) |
 

@@ -8,7 +8,7 @@ EU CBAM offline calculator (EcoCheck skill). Python 3 standard library only.
   python3 cbam_calc.py see     <input.json>
 
 Data: ../references/default-values-vn.csv (Implementing Regulation (EU) 2025/2621 as corrected by 2026/1740;
-VN, ZZ = other countries, XX = Annex IV) and ../references/benchmarks.csv (2025/2620 Annex, columns A/B).
+VN, ZZ = other countries, XX = Annex IV) and ../references/benchmarks-*.csv (2025/2620 Annex, columns A/B, split by CN chapter).
 Same rules as the EcoCheck MCP tools (https://ecocheck.ai/mcp). Indicative only — not a CBAM declaration.
 
 `see` input.json example:
@@ -91,11 +91,16 @@ def load_defaults():
     return rows
 
 
+# benchmarks-*.csv: the 2025/2620 Annex split by CN chapter so that every file stays small enough to read
+BENCH_FILES = ["benchmarks-other.csv", "benchmarks-72-a.csv", "benchmarks-72-b.csv", "benchmarks-73.csv"]
+
+
 def load_benchmarks():
     out = {}
-    with open(os.path.join(REF, "benchmarks.csv"), newline="", encoding="utf-8") as f:
-        for r in csv.DictReader(f):
-            out.setdefault(r["cn_code"], []).append((r["route"] or None, fnum(r["bmg_column_a"]), fnum(r["bmg_column_b"])))
+    for name in BENCH_FILES:
+        with open(os.path.join(REF, name), newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                out.setdefault(r["cn_code"], []).append((r["route"] or None, fnum(r["bmg_column_a"]), fnum(r["bmg_column_b"])))
     return out
 
 
